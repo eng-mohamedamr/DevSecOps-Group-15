@@ -10,7 +10,7 @@ on:
 jobs:
   prod-job:
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.env == 'prod' }}
+    if: inputs.env == 'prod'
     steps:
     - name: Run prod job
       run: |
@@ -18,7 +18,7 @@ jobs:
         cat mohamed.txt
   dev-job:
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.env == 'dev' }}
+    if: inputs.env == 'dev'
     steps:
     - name: Run dev job
       run: |
