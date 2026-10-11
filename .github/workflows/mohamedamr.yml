@@ -22,6 +22,7 @@ jobs:
     steps:
     - name: Run dev job
       run: |
-        echo "This is the dev job" > mohamed.txt
-        cat mohamed.txt
+        echo "This is the dev job"
+        ls -la
+    
       
